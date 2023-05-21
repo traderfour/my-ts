@@ -1,6 +1,7 @@
 import { requestHeader } from "../../../config/requestHeader";
 import { config } from "../../../config/index";
 import type { ITradingAccountListResponse } from "./types/TradingAccounts.type";
+import responseHandeling from "../../../../core/responseHandeling";
 /**
  * @description list of trading accounts
  * @param token: authorization token thath should be set on header
@@ -20,11 +21,6 @@ export const getTradingAccounts = async (
       method: "get",
     }
   ).then(async (response) => {
-    if (response.ok) {
-      return (await response.json()) as ITradingAccountListResponse;
-    } else {
-      const errorMessage = await response.text();
-      return Promise.reject(new Error(errorMessage));
-    }
+    return await responseHandeling(response);
   });
 };
