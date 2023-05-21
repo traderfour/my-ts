@@ -1,3 +1,4 @@
 export interface IConfig {
-    baseURL: string
+  baseURL: string;
+  headers?: HeadersInit;
 }

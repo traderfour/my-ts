@@ -1,10 +1,10 @@
 import { IConfig } from "./interface/Config";
 
 /**
-* @description Set Base URL and other configs
-* @param endpoint: string
-* @returns your base URL is Set
-*/
+ * @description Set Base URL and other configs
+ * @returns your base URL is Set and other configs added
+ */
 export let config: IConfig = {
-    baseURL: ''
-}
+  baseURL: "",
+  headers: {},
+};

@@ -8,16 +8,12 @@ import type { ITradingAccountListResponse } from "./types/TradingAccounts.type";
  * @returns a session
  * @default /api/v1/login
  */
-export const getTradingAccounts = async (
-  identifier: string,
-  endpoint?: string
-) => {
+export const getTradingAccounts = async (endpoint?: string) => {
   return await fetch(
     config.baseURL + (endpoint ? endpoint : "/api/v1/request-otp"),
     {
-      headers: { ...requestHeader },
-      method: "post",
-      body: JSON.stringify({ identifier: identifier }),
+      headers: { ...requestHeader, ...config.headers },
+      method: "get",
     }
   ).then(async (response) => {
     if (response.ok) {
