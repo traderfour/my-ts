@@ -7,4 +7,11 @@ import { IConfig } from "./interface/Config";
 export let config: IConfig = {
   baseURL: "",
   headers: {},
+  defaultValues: {
+    apiVersion: "v1",
+    headerAuthorizationTitle: "Authorization",
+    defaultEndpoints: {
+      tradingAccountsList: "/my/trading/accounts",
+    },
+  },
 };
