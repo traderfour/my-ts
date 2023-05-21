@@ -1,3 +1,5 @@
+
+import { getTradingAccounts } from "./list";
 export const tradingAccounts = () => {
-  return {};
+  return { getTradingAccounts };
 };

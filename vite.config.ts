@@ -16,5 +16,10 @@ export default defineConfig({
       fileName: "my-ts",
     },
   },
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, "src"),
+    },
+  },
   plugins: [dts()],
 });

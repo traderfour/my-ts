@@ -7,7 +7,9 @@ import type { ITradingAccountListResponse } from "./types/TradingAccounts.type";
  * @returns a trading accounts list
  * @default /api/v1/login
  */
-export const getTradingAccounts = async (endpoint?: string) => {
+export const getTradingAccounts = async (
+  endpoint?: string
+): Promise<ITradingAccountListResponse> => {
   return await fetch(
     config.baseURL +
       (endpoint
