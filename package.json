@@ -1,7 +1,7 @@
 {
   "name": "@traderfour/my-ts",
   "private": false,
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "type": "module",
   "main": "./dist/my-ts.umd.cjs",
   "module": "./dist/my-ts.js",
@@ -47,6 +47,6 @@
     "vitest": "^0.29.7"
   },
   "dependencies": {
-    "ofetch": "^1.0.1"
+    "@traderfour/api-ts": "^1.0.0-alpha.1"
   }
 }
