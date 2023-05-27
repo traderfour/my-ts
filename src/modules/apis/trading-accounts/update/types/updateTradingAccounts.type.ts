@@ -1,4 +1,4 @@
-export interface ITradingAccountListResponse {
+export interface IUpdateTradingAccountResponse {
     succeed: boolean;
     message: string;
     results: any[];

@@ -7,10 +7,11 @@ export const useUrl = (
   const url = config.baseURL + endpoint;
   return url;
 };
-export const useHeaders = (method = "GET" as string) => {
+export const useHeaders = (identifier?:any,method = "GET" as string ) => {
   const headersConfig = {
     headers: { ...requestHeader, ...config.headers },
     method,
+    body:identifier,
   };
   return headersConfig;
 };

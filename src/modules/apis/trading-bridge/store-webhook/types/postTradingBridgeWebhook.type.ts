@@ -1,4 +1,4 @@
-export interface ITradingAccountListResponse {
+export interface IBridgeWebhookStoreResponse {
     succeed: boolean;
     message: string;
     results: any[];

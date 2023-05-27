@@ -12,7 +12,7 @@ import { useHeaders, useUrl } from "../../../../core";
 export const getTradingAccounts = async (
   endpoint?: string
 ): Promise<ITradingAccountListResponse> => {
-  return await fetch(useUrl(endpoint), useHeaders()).then(async (response) => {
+  return await fetch(useUrl(endpoint ? endpoint : '/my/trading/accounts'), useHeaders()).then(async (response) => {
     return await responseHandeling(response);
   });
 };

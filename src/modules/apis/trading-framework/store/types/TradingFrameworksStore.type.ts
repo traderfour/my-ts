@@ -1,4 +1,4 @@
-export interface ITradingAccountListResponse {
+export interface ITradingFrameworkStoreResponse {
     succeed: boolean;
     message: string;
     results: any[];
