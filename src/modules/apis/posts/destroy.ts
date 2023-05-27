@@ -1,7 +1,7 @@
-import responseHandeling from "../../../../core/responseHandeling";
-import { useHeaders, useUrl } from "../../../../core";
-import {IDelete} from "../../../interface/IDelete";
-import {config} from "../../../config";
+import responseHandeling from "../../../core/responseHandeling";
+import { useHeaders, useUrl } from "../../../core";
+import {IDelete} from "../../interface/IDelete";
+import {config} from "../../config";
 
 /**
  * @description delete a trading account

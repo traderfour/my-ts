@@ -1,5 +1,5 @@
 import { config } from "./modules/config";
-import {IPostList} from "./modules/apis/posts/list/types/IPostList.type";
+import {IPostList} from "./modules/apis/posts/interface/IPostList.type";
 import {IPost} from "./modules/apis/posts/interface/IPost";
 import {IDelete} from "./modules/interface/IDelete";
 import {posts} from "./modules/apis/posts";

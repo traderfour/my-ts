@@ -1,7 +1,7 @@
-import responseHandeling from "../../../../core/responseHandeling";
-import { useHeaders, useUrl } from "../../../../core";
-import {IPostList} from "./types/IPostList.type";
-import {config} from "../../../config";
+import responseHandeling from "../../../core/responseHandeling";
+import { useHeaders, useUrl } from "../../../core";
+import {IPostList} from "./interface/IPostList.type";
+import {config} from "../../config";
 
 /**
  * @description list of trading accounts
