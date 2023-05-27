@@ -1,7 +1,7 @@
 export interface IResponse {
     succeed: boolean
     message: string
-    results: any[]
+    results: any
     metas: {
         current_page: number;
         from: any;

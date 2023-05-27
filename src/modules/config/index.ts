@@ -14,6 +14,10 @@ export let config: IConfig = {
     trading:{
       accounts: "/my/trading/accounts/",
       frameworks: "/my/trading/frameworks/",
+      bridge:{
+          check: "/my/trading/bridge/check",
+          webhook: "/my/trading/bridge/webhook"
+      }
     }
   },
 };
