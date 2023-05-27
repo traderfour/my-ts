@@ -1,6 +1,7 @@
 import responseHandeling from "../../../../core/responseHandeling";
 import { useHeaders, useUrl } from "../../../../core";
 import {IPost} from "../interface/IPost";
+import {config} from "../../../config";
 
 /**
  * @description post trading accounts
@@ -10,10 +11,10 @@ import {IPost} from "../interface/IPost";
  * @param identifier
  */
 
-export const postTradingAccounts = async (
+export const store = async (
   endpoint?: string, identifier?:any
 ): Promise<IPost> => {
-  return await fetch(useUrl(endpoint ? endpoint : '/my/posts'), useHeaders(identifier,"POST")).then(async (response) => {
+  return await fetch(useUrl(endpoint ? endpoint : config.endpoints.posts), useHeaders(identifier,"POST")).then(async (response) => {
     return await responseHandeling(response);
   });
 };

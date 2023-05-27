@@ -1,6 +1,7 @@
 import responseHandeling from "../../../../core/responseHandeling";
 import { useHeaders, useUrl } from "../../../../core";
 import {IPostList} from "./types/IPostList.type";
+import {config} from "../../../config";
 
 /**
  * @description list of trading accounts
@@ -9,10 +10,10 @@ import {IPostList} from "./types/IPostList.type";
  * @param endpoint
  */
 
-export const getTradingAccounts = async (
+export const list = async (
   endpoint?: string
 ): Promise<IPostList> => {
-  return await fetch(useUrl(endpoint ? endpoint : '/my/posts'), useHeaders()).then(async (response) => {
+  return await fetch(useUrl(endpoint ? endpoint : config.endpoints.posts), useHeaders()).then(async (response) => {
     return await responseHandeling(response);
   });
 };
