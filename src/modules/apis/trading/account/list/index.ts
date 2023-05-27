@@ -1,18 +1,19 @@
-import type { ITradingAccountListResponse } from "./types/TradingAccounts.type";
-import responseHandeling from "../../../../core/responseHandeling";
-import { useHeaders, useUrl } from "../../../../core";
+import {useHeaders, useUrl} from "../../../../../core";
+import responseHandeling from "../../../../../core/responseHandeling";
+import {IAccountList} from "./types/IAccountList.type";
+import {config} from "../../../../config";
 
 /**
  * @description list of trading accounts
- * @param token: authorization token thath should be set on header
  * @returns a trading accounts list
  * @default  endpoint is /my/trading/accounts
+ * @param endpoint
  */
 
-export const getTradingAccounts = async (
+export const list = async (
   endpoint?: string
-): Promise<ITradingAccountListResponse> => {
-  return await fetch(useUrl(endpoint ? endpoint : '/my/trading/accounts'), useHeaders()).then(async (response) => {
+): Promise<IAccountList> => {
+  return await fetch(useUrl(endpoint ? endpoint : config.endpoints.trading.accounts), useHeaders()).then(async (response) => {
     return await responseHandeling(response);
   });
 };

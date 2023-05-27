@@ -1,18 +1,20 @@
-import type { ITradingAccountStoreResponse } from "./types/tradingAccountsStore.type";
-import responseHandeling from "../../../../core/responseHandeling";
-import { useHeaders, useUrl } from "../../../../core";
-
 /**
  * @description post trading accounts
- * @param token: authorization token thath should be set on header
  * @returns trading accounts post response
  * @default  endpoint is /my/trading/accounts
+ * @param endpoint
+ * @param identifier
  */
+import {IAccount} from "../interface/IAccount";
+import {useHeaders, useUrl} from "../../../../../core";
+import responseHandeling from "../../../../../core/responseHandeling";
+import {config} from "../../../../config";
 
-export const postTradingAccounts = async (
+
+export const store = async (
   endpoint?: string, identifier?:any
-): Promise<ITradingAccountStoreResponse> => {
-  return await fetch(useUrl(endpoint ? endpoint : '/my/trading/accounts'), useHeaders(identifier,"POST")).then(async (response) => {
+): Promise<IAccount> => {
+  return await fetch(useUrl(endpoint ? endpoint : config.endpoints.trading.accounts.store), useHeaders(identifier,"POST")).then(async (response) => {
     return await responseHandeling(response);
   });
 };

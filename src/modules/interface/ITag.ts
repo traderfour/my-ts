@@ -1,4 +1,4 @@
-import {IResponse} from '../../../interface/IResponse';
+import {IResponse} from "./IResponse";
 
 export interface ITag extends IResponse{
     uuid: string;

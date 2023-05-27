@@ -1,18 +1,21 @@
-import type { IUpdateTradingAccountResponse } from "./types/updateTradingAccounts.type";
-import responseHandeling from "../../../../core/responseHandeling";
-import { useHeaders, useUrl } from "../../../../core";
+import {config} from "../../../../config";
+import {useHeaders, useUrl} from "../../../../../core";
+import responseHandeling from "../../../../../core/responseHandeling";
+import {IAccount} from "../interface/IAccount";
 
 /**
  * @description update a trading account
- * @param token: authorization token thath should be set on header
  * @returns a trading account update response
  * @default  endpoint is /my/trading/accounts/id
+ * @param endpoint
+ * @param identifier
+ * @param id
  */
 
-export const UpdateTradingAccounts = async (
+export const update = async (
   endpoint?: string, identifier?:any,id?:any
-): Promise<IUpdateTradingAccountResponse> => {
-  return await fetch(useUrl(endpoint ? endpoint : `/my/trading/accounts/${id}`), useHeaders(identifier,"PUT")).then(async (response) => {
+): Promise<IAccount> => {
+  return await fetch(useUrl(endpoint ? endpoint : config.endpoints.trading.accounts+id), useHeaders(identifier,"PUT")).then(async (response) => {
     return await responseHandeling(response);
   });
 };

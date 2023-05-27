@@ -1,5 +1,6 @@
 import {IPost} from "../../interface/IPost";
+import {IAccount} from "../../../trading/account/interface/IAccount";
 
 export interface IPostList extends IPost{
-    results: IPost[];
+    results: IAccount[];
 }

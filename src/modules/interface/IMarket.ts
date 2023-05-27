@@ -1,9 +1,8 @@
 import {IResponse} from "./IResponse";
 
-export interface ICategory extends IResponse{
+export interface IMarket extends IResponse{
     uuid: string;
-    title: string;
+    name: string;
     slug: string;
     icon: string;
-    type: number;
 }
