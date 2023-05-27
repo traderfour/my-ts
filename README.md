@@ -1,4 +1,4 @@
-# ts-my
+# my-ts
 
 The official repository for Trader4 my (panel) TypeScript package.
 
