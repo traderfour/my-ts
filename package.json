@@ -1,7 +1,7 @@
 {
   "name": "@traderfour/my-ts",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.1",
   "type": "module",
   "main": "./dist/my-ts.umd.cjs",
   "module": "./dist/my-ts.js",
@@ -41,6 +41,8 @@
   "devDependencies": {
     "@types/node": "^18.15.5",
     "@vitest/ui": "^0.30.1",
+    "express": "^4.18.2",
+    "happy-dom": "^9.19.2",
     "msw": "^1.2.1",
     "typescript": "^4.9.3",
     "vite": "^4.2.0",
@@ -48,7 +50,6 @@
     "vitest": "^0.29.7"
   },
   "dependencies": {
-    "happy-dom": "^9.6.1",
-    "whatwg-fetch": "^3.6.2"
+    "ofetch": "^1.0.1"
   }
 }
