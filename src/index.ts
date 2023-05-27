@@ -1,9 +1,9 @@
 import { config } from "./modules/config";
-import {IPostList} from "./modules/apis/posts/interface/IPostList.type";
+import {IPostList} from "./modules/apis/posts/interface/IPostList";
 import {IPost} from "./modules/apis/posts/interface/IPost";
 import {IDelete} from "./modules/interface/IDelete";
 import {posts} from "./modules/apis/posts";
-import {IAccountList} from "./modules/apis/trading/account/list/types/IAccountList.type";
+import {IAccountList} from "./modules/apis/trading/account/interface/IAccountList";
 import {IAccount} from "./modules/apis/trading/account/interface/IAccount";
 import {accounts} from "./modules/apis/trading/account";
 import {IFrameworkList} from "./modules/apis/trading/framework/interface/IFrameworkList";

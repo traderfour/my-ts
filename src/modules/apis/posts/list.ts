@@ -1,6 +1,6 @@
 import responseHandeling from "../../../core/responseHandeling";
 import { useHeaders, useUrl } from "../../../core";
-import {IPostList} from "./interface/IPostList.type";
+import {IPostList} from "./interface/IPostList";
 import {config} from "../../config";
 
 /**

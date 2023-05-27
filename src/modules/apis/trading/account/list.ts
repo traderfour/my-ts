@@ -1,7 +1,7 @@
-import {useHeaders, useUrl} from "../../../../../core";
-import responseHandeling from "../../../../../core/responseHandeling";
-import {IAccountList} from "./types/IAccountList.type";
-import {config} from "../../../../config";
+import {useHeaders, useUrl} from "../../../../core";
+import responseHandeling from "../../../../core/responseHandeling";
+import {IAccountList} from "./interface/IAccountList";
+import {config} from "../../../config";
 
 /**
  * @description list of trading accounts

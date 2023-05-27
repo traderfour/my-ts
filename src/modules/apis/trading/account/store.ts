@@ -5,10 +5,10 @@
  * @param endpoint
  * @param identifier
  */
-import {IAccount} from "../interface/IAccount";
-import {useHeaders, useUrl} from "../../../../../core";
-import responseHandeling from "../../../../../core/responseHandeling";
-import {config} from "../../../../config";
+import {IAccount} from "./interface/IAccount";
+import {useHeaders, useUrl} from "../../../../core";
+import responseHandeling from "../../../../core/responseHandeling";
+import {config} from "../../../config";
 
 
 export const store = async (

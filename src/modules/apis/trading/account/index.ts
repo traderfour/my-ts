@@ -2,7 +2,7 @@ import {list} from "./list";
 import {store} from "./store";
 import {single} from "./single";
 import {update} from "./update";
-import {destroy} from "./delete";
+import {destroy} from "./destroy";
 
 export const accounts = () => {
   return {

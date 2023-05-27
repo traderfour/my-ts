@@ -1,7 +1,7 @@
-import {config} from "../../../../config";
-import {useHeaders, useUrl} from "../../../../../core";
-import responseHandeling from "../../../../../core/responseHandeling";
-import {IAccount} from "../interface/IAccount";
+import {config} from "../../../config";
+import {useHeaders, useUrl} from "../../../../core";
+import responseHandeling from "../../../../core/responseHandeling";
+import {IAccount} from "./interface/IAccount";
 
 /**
  * @description update a trading account
