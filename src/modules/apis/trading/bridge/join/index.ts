@@ -1,6 +1,6 @@
 import type { IBridgeCheckStoreResponse } from "./types/postTradingBridgeCheck.type";
 import responseHandeling from "../../../../core/responseHandeling";
-import { useHeaders, useUrl } from "../../../../core";
+import { useHeaders, useUrl } from '../../../../core';
 
 /**
  * @description post trading bridge check
@@ -12,7 +12,7 @@ import { useHeaders, useUrl } from "../../../../core";
 export const postTradingBridgeCheck = async (
   endpoint?: string, identifier?:any
 ): Promise<IBridgeCheckStoreResponse> => {
-  return await fetch(useUrl(endpoint ? endpoint : '/my/trading/bridge/check'), useHeaders(identifier,"POST")).then(async (response) => {
+  return await fetch(useUrl(endpoint ? endpoint : '/my/trading/bridge/join'), useHeaders(identifier,"POST")).then(async (response) => {
     return await responseHandeling(response);
   });
 };
