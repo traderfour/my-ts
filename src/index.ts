@@ -6,6 +6,9 @@ import {posts} from "./modules/apis/posts";
 import {IAccountList} from "./modules/apis/trading/account/list/types/IAccountList.type";
 import {IAccount} from "./modules/apis/trading/account/interface/IAccount";
 import {accounts} from "./modules/apis/trading/account";
+import {IFrameworkList} from "./modules/apis/trading/framework/interface/IFrameworkList";
+import {IFramework} from "./modules/apis/trading/framework/interface/IFramework";
+import {frameworks} from "./modules/apis/trading/framework";
 
 export interface IMyTs {
   config: typeof config;
@@ -24,6 +27,13 @@ export interface IMyTs {
         update: (endpoint?: string | undefined) => Promise<IAccount>;
         destroy: (endpoint?: string | undefined) => Promise<IDelete>;
     },
+    frameworks: {
+        list: (endpoint?: string | undefined) => Promise<IFrameworkList>;
+        single: (endpoint?: string | undefined) => Promise<IFramework>;
+        store: (endpoint?: string | undefined) => Promise<IFramework>;
+        update: (endpoint?: string | undefined) => Promise<IFramework>;
+        destroy: (endpoint?: string | undefined) => Promise<IDelete>;
+    }
   }
 }
 
@@ -32,7 +42,8 @@ export const myTs = (): IMyTs => {
     config,
     posts: posts(),
     trading: {
-      accounts: accounts()
+        accounts: accounts(),
+        frameworks: frameworks(),
     },
   };
 };

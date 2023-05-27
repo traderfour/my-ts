@@ -13,6 +13,7 @@ export let config: IConfig = {
     posts: "/my/posts/",
     trading:{
       accounts: "/my/trading/accounts/",
+      frameworks: "/my/trading/frameworks/",
     }
   },
 };
