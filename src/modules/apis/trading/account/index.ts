@@ -1,14 +1,15 @@
-import { getTradingAccounts } from "./list";
-import { postTradingAccounts } from "./store";
-import { getSingleTradingAccount } from "./single";
-import { deleteTradingAccount } from "./delete";
-import { UpdateTradingAccounts } from "./update";
-export const tradingAccounts = () => {
+import {list} from "./list";
+import {store} from "./store";
+import {single} from "./single";
+import {update} from "./update";
+import {destroy} from "./destroy";
+
+export const accounts = () => {
   return {
-    getTradingAccounts,
-    postTradingAccounts,
-    getSingleTradingAccount,
-    deleteTradingAccount,
-    UpdateTradingAccounts,
+    list,
+    store,
+    single,
+    update,
+    destroy
   };
 };

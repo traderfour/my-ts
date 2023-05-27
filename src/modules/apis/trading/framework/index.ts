@@ -1,14 +1,15 @@
-import { getTradingFrameworkList } from "./list";
-import { postTradingFramework } from "./store";
-import { getSingleTradingFramework } from "./single";
-import { deleteTradingFramework } from "./delete";
-import { updateTradingFramework } from "./update";
-export const tradingFrameworks = () => {
+import {list} from "./list";
+import {store} from "./store";
+import {single} from "./single";
+import {update} from "./update";
+import {destroy} from "./destroy";
+
+export const frameworks = () => {
   return {
-    getTradingFrameworkList,
-    postTradingFramework,
-    getSingleTradingFramework,
-    deleteTradingFramework,
-    updateTradingFramework,
+    list,
+    store,
+    single,
+    update,
+    destroy,
   };
 };

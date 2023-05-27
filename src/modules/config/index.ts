@@ -5,13 +5,19 @@ import { IConfig } from "./interface/Config";
  * @returns your base URL is Set and other configs added
  */
 export let config: IConfig = {
-  baseURL: "",
+  baseURL: "https://api.trader4.net",
   headers: {},
-  defaultValues: {
-    apiVersion: "v1",
-    headerAuthorizationTitle: "Authorization",
-    defaultEndpoints: {
-      tradingAccountsList: "/my/trading/accounts",
-    },
+  apiVersion: "v1",
+  authorization: "Authorization",
+  endpoints: {
+    posts: "/my/posts/",
+    trading:{
+      accounts: "/my/trading/accounts/",
+      frameworks: "/my/trading/frameworks/",
+      bridge:{
+          check: "/my/trading/bridge/check",
+          webhook: "/my/trading/bridge/webhook"
+      }
+    }
   },
 };

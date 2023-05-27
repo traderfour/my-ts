@@ -1,17 +1,15 @@
-import { requestHeader } from "../modules/config/requestHeader";
-import { config } from "../modules/config";
+import {requestHeader} from "../modules/config/requestHeader";
+import {config} from "../modules/config";
 
 export const useUrl = (
-  endpoint = config.defaultValues.defaultEndpoints.tradingAccountsList as string
+  endpoint = config.endpoints.trading.accounts as string
 ): RequestInfo | URL => {
-  const url = config.baseURL + endpoint;
-  return url;
+  return config.baseURL + endpoint;
 };
 export const useHeaders = (identifier?:any,method = "GET" as string ) => {
-  const headersConfig = {
-    headers: { ...requestHeader, ...config.headers },
+  return {
+    headers: {...requestHeader, ...config.headers},
     method,
-    body:identifier,
+    body: identifier,
   };
-  return headersConfig;
 };

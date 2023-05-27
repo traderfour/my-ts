@@ -1,20 +1,17 @@
 {
   "name": "@traderfour/my-ts",
   "private": false,
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "type": "module",
   "main": "./dist/my-ts.umd.cjs",
   "module": "./dist/my-ts.js",
   "types": "./dist/index.d.ts",
   "license": "ISC",
   "keywords": [
-    "authentication",
-    "login",
-    "signup",
-    "auth service",
-    "Werify",
+    "traderfour",
+    "trading",
     "my-ts",
-    "werify id"
+    "package"
   ],
   "exports": {
     ".": {
@@ -23,11 +20,11 @@
     }
   },
   "repository": {
-    "url": "https://github.com/Werify/my-ts",
+    "url": "https://github.com/traderfour/my-ts",
     "directory": "/src"
   },
   "bugs": {
-    "url": "https://github.com/Werify/my-ts/issues"
+    "url": "https://github.com/traderfour/my-ts/issues"
   },
   "files": [
     "dist"
