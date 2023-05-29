@@ -9,12 +9,13 @@ import { config } from "../../config";
  * @default  endpoint is /my/posts
  * @param payload
  * @param uuid
+ * @param endpoint
  */
 
 export const update = async (
-  endpoint?: string,
-  payload?: IPost,
-  uuid?: string
+    uuid: string,
+    endpoint?: string,
+    payload?: IPost,
 ): Promise<IPostResponse> => {
   return await fetch(
     useUrl(endpoint ? endpoint : config.endpoints.posts + uuid),
