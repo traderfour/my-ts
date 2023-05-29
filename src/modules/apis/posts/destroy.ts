@@ -8,10 +8,11 @@ import { config } from "../../config";
  * @returns a trading account delete res
  * @default  endpoint is /my/posts
  * @param uuid
+ * @param endpoint
  */
 export const destroy = async (
-  endpoint?: string,
-  uuid?: string
+    uuid: string,
+    endpoint?: string,
 ): Promise<IDelete> => {
   return await fetch(
     useUrl(endpoint ? endpoint : config.endpoints.posts + uuid),

@@ -1,6 +1,6 @@
 import responseHandeling from "../../../core/responseHandeling";
 import { useHeaders, useUrl } from "../../../core";
-import { IPost, IPostResponse } from "./interface/IPost";
+import { IPostResponse } from "./interface/IPost";
 import { config } from "../../config";
 
 /**
@@ -12,8 +12,8 @@ import { config } from "../../config";
  */
 
 export const single = async (
-  endpoint?: string,
-  uuid?: string
+    uuid: string,
+    endpoint?: string,
 ): Promise<IPostResponse> => {
   return await fetch(
     useUrl(endpoint ? endpoint : config.endpoints.posts + uuid),
