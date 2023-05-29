@@ -1,15 +1,31 @@
-import {requestHeader} from "../modules/config/requestHeader";
-import {config} from "../modules/config";
+import { requestHeader } from "../modules/config/requestHeader";
+import { config } from "../modules/config";
 
-export const useUrl = (
-  endpoint = config.endpoints.trading.accounts as string
-): RequestInfo | URL => {
-  return config.baseURL + endpoint;
+// TODO need test
+export const useUrl = (endpoint?: any): RequestInfo | URL => {
+  const apiURL =
+    config.baseURL +
+    config.apiVersion +
+    (config.baseEndpoint ? config.baseEndpoint : "") +
+    endpoint
+      ? endpoint
+      : config.endpoints[endpoint];
+  return apiURL;
 };
-export const useHeaders = (identifier?:any,method = "GET" as string ) => {
+
+export const useHeaders = (
+  payload?: any,
+  method = "GET" as string,
+  extraHeaders?: any
+) => {
   return {
-    headers: {...requestHeader, ...config.headers},
+    headers: {
+      ...requestHeader,
+      ...config.headers,
+      [config.authorization]: config.token,
+      extraHeaders,
+    },
     method,
-    body: identifier,
+    body: payload,
   };
 };
